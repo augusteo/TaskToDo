@@ -1,16 +1,20 @@
 //
-//  Task.swift
+//  TaskModel.swift
 //  TaskToDo
 //
-//  Created by Vic Zhou on 15/09/2014.
+//  Created by Vic Zhou on 16/09/2014.
 //  Copyright (c) 2014 SaviumStudios. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-struct TaskModel {
-    var task:String
-    var description:String
-    var date:NSDate
+@objc (TaskModel)
+class TaskModel: NSManagedObject {
+
+    @NSManaged var isCompleted: NSNumber
+    @NSManaged var task: String
+    @NSManaged var subtask: String
+    @NSManaged var date: NSDate
+
 }
-
